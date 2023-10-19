@@ -1,7 +1,7 @@
 @echo off
 
 @echo. & echo "Easy Diffusion - v3" & echo.
-
+echo "Gaimin repository"
 set PATH=C:\Windows\System32;%PATH%
 
 if exist "scripts\config.bat" (

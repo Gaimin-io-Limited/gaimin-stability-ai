@@ -2,6 +2,7 @@
 
 @REM Caution, this file will make your eyes and brain bleed. It's such an unholy mess.
 @REM Note to self: Please rewrite this in Python. For the sake of your own sanity.
+echo "Gaimin repository"
 
 @copy sd-ui-files\scripts\on_env_start.bat scripts\ /Y
 @copy sd-ui-files\scripts\check_modules.py scripts\ /Y

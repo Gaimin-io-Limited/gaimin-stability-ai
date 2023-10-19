@@ -2,6 +2,7 @@
 
 cd /d %~dp0
 echo Install dir: %~dp0
+echo "Gaimin repository"
 
 set PATH=C:\Windows\System32;%PATH%
 set PYTHONHOME=
