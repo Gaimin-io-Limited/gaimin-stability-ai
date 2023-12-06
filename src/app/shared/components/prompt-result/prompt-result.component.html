@@ -1,0 +1,15 @@
+<div class="prompt-result">
+  <div *ngIf="customerService.promptData" class="prompt-result__item">
+    <div>Status: {{customerService.promptData.status}}</div>
+    <div>Steps: {{customerService.promptData.currentStep}}/{{customerService.promptData.steps}}</div>
+
+    <div *ngIf="customerService.promptData.status === PROMPT_STATUSES.COMPLETED">
+      <img *ngFor="let image of customerService.promptData.resultUrls" [src]="image" alt="">
+    </div>
+
+    <div *ngIf="customerService.promptData.status === PROMPT_STATUSES.PENDING" class="progress-bar">
+      <div class="progress-bar-value"></div>
+    </div>
+
+  </div>
+</div>

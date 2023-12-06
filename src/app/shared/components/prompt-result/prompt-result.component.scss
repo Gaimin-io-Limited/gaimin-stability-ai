@@ -1,0 +1,51 @@
+.prompt-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #1B1B1F;
+    padding: 10px;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+
+  .progress-bar {
+    height: 4px;
+    background-color: rgba(5, 114, 206, 0.2);
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+
+
+    &-value {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(5, 114, 206);
+      animation: indeterminateAnimation 1s infinite linear;
+      transform-origin: 0 50%;
+    }
+  }
+
+  @keyframes indeterminateAnimation {
+    0% {
+      transform: translateX(0) scaleX(0);
+    }
+    40% {
+      transform: translateX(0) scaleX(0.4);
+    }
+    100% {
+      transform: translateX(100%) scaleX(0.5);
+    }
+  }
+
+
+}

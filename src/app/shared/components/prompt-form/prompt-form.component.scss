@@ -1,0 +1,72 @@
+.prompt {
+
+  &-form {
+    width: 100%;
+
+    label {
+      width: 100%;
+      display: block;
+      margin: 15px 0;
+
+      input, select {
+        width: 100%;
+        height: 44px;
+        display: block;
+        background: #09090A;
+        border: 1px solid #1B1B1F;
+        border-radius: 5px;
+        color: #fff;
+        padding-left: 16px;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+
+    }
+
+    .range {
+      width: 100%;
+
+      &__input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input[type='range'] {
+          width: 93%;
+          padding: 0;
+          height: initial;
+        }
+      }
+
+    }
+
+    &__size {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label {
+        width: 49%;
+      }
+    }
+
+    button {
+      width: 100px;
+      height: 44px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      background: #0075ff;
+      border: none;
+      color: white;
+      font-weight: 500;
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+
+  }
+
+}

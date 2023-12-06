@@ -1,0 +1,22 @@
+.prompt-layout {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+
+  app-prompt-form, app-prompt-result {
+    width: 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .prompt-layout {
+    flex-direction: column;
+    align-items: center;
+
+    app-prompt-form, app-prompt-result {
+      margin-top: 50px;
+      width: 80%;
+    }
+  }
+}

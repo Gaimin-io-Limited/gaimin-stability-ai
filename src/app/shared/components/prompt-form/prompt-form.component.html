@@ -1,0 +1,67 @@
+<div class="prompt">
+  <form class="prompt-form" [formGroup]="form">
+    <label>
+      Enter prompt
+      <input formControlName="prompt" type="text">
+    </label>
+    <label>
+      Enter negative prompt
+      <input formControlName="negativePrompt" type="text">
+    </label>
+    <div class="prompt-form__size">
+      <label>
+        Width
+        <select formControlName="width">
+          <option *ngFor="let item of imageSizes" [value]="item">{{item}}</option>
+        </select>
+      </label>
+      <label>
+        Height
+        <select formControlName="height">
+          <option *ngFor="let item of imageSizes" [value]="item">{{item}}</option>
+        </select>
+      </label>
+    </div>
+    <label>
+      Sampling module
+      <select formControlName="samplingModule">
+        <option *ngFor="let item of samplingModules" [value]="item.value">{{item.title}}</option>
+      </select>
+    </label>
+    <label>
+      Seed
+      <input formControlName="seed" type="number" min="1">
+    </label>
+    <label>
+      Number of outputs
+      <input formControlName="outputsNumber" type="number" min="1">
+    </label>
+
+    <label class="range">
+      Number of inference steps
+      <div class="range__input">
+        <input formControlName="steps" type="range" min="1" max="100">
+        <div>{{form.get('steps')?.value}}</div>
+      </div>
+    </label>
+
+    <label class="range">
+      Image quality
+      <div  class="range__input">
+        <input formControlName="imageQuality" type="range" min="10" max="95">
+        <div>{{form.get('imageQuality')?.value}}</div>
+      </div>
+    </label>
+
+    <label class="range">
+      Cfg scale
+      <div class="range__input">
+        <input formControlName="cfgScale" type="range" min="1.1" step="0.1" max="50">
+        <div>{{form.get('cfgScale')?.value}}</div>
+      </div>
+    </label>
+
+    <button [disabled]="form.invalid" (click)="submit()">Submit</button>
+  </form>
+
+</div>
